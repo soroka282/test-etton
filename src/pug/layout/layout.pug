@@ -1,0 +1,29 @@
+doctype html  
+html(lang='ru')
+  head
+    meta(charset='utf-8')
+    meta(name='Test-Etton' content='Test-Etton')
+    meta(name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no')
+    title Test-Etton
+    link(href='css/style.min.css' rel='stylesheet')
+
+  body.body
+    nav.body__nav.nav
+      button.nav__button-close
+      ul.nav__list
+        for item in [{text:'Main page', url:'index.html'}, {text: 'Content', url:'cards.html'}]
+          li.nav__item
+            a(href=item.url)=item.text
+
+    header.header__body.header
+      div.header__wrap  
+        button.header__button-open
+        svg.header__logo(width='50' height='50' viewBox='0 0 20 20')
+          use(xlink:href='./img/sprite/sprite.svg#logo')
+          
+    block content
+
+    footer.body__footer.footer
+      div Email: 
+        a.footer__email(href='mailto:soroka282@yandex.ru' type='email') soroka282@yandex.ru
+    script(src='js/main.bundle.js')

@@ -1,0 +1,101 @@
+.nav {
+  display: none;
+  position: fixed;
+  width: 320px;
+  height: 105%;
+  background-color: $basic-tomato;
+  z-index: 10;
+  animation: menu-in ease-in 0.5s forwards;
+}
+
+.nav__list {
+  display: block;
+  margin-top: 150px;
+  margin-right: 30px;
+  flex-direction: column;
+  border-right: 1px solid $basic-yellow-white;
+}
+
+.nav__item {
+  font-size: 20px;
+  padding-left: 30px;
+  margin: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  height: 40px;
+  box-sizing: border-box;
+
+  & a:hover,
+  & a:focus {
+    outline: none;
+    border-bottom: 2px solid $basic-yellow-white;
+    animation: opacity ease 0.5s forwards;
+  }
+
+  & a:active {
+    color: $basic-black-blue;
+    border-bottom: none;
+  }
+}
+
+.nav__button-close {
+  width: 30px;
+  height: 2px;
+  border: none;
+  background-color: $basic-yellow-white;
+  position: relative;
+  left: 35px;
+  top: 30px;
+  transform: rotate(45deg);
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $basic-yellow-white;
+    width: 30px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+  }
+
+  &:hover,
+  &:hover::before {
+    background-color: $basic-black-blue;
+    transition-duration: 1s;
+  }
+
+  &:focus,
+  &:focus::before {
+    background-color: $basic-yellow-white;
+  }
+}
+
+@keyframes menu-in {
+  0% {
+    left: -100px;
+  }
+
+  50% {
+    left: 0;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}

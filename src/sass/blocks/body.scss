@@ -1,0 +1,26 @@
+.body {
+  min-width: 320px;
+  font-family: "roboto-regular", "Georgia", serif;
+  color: $basic-yellow-white;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+  background-color: $darken-blue;
+
+  @media (min-width: $width-tablet) {
+    min-width: 768px;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 1200px;
+  }
+}
+
+.body__cards {
+  margin-top: 20px;
+}
+
+.body__footer {
+  margin-top: 50vh;
+}

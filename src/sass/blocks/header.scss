@@ -1,0 +1,70 @@
+.header {
+  min-width: 320px;
+  height: 100px;
+  background-color: $basic-black-blue;
+  border-radius: 10px;
+
+  @media (min-width: $width-tablet) {
+    min-width: 768px;
+  }
+
+  @media (min-width: $width-desktop) {
+    width: 1200px;
+  }
+}
+
+.header__wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  padding-top: 20px;
+}
+
+.header__button-open {
+  width: 30px;
+  height: 2px;
+  background-color: $basic-tomato;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+  margin-left: 50px;
+  margin-top: 25px;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    top: 5px;
+    left: 0;
+    height: 2px;
+    background-color: inherit;
+    border-radius: inherit;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    top: -5px;
+    left: 0;
+    height: 2px;
+    border-radius: inherit;
+    background-color: inherit;
+  }
+
+  &:hover,
+  &:hover::before {
+    background-color: $opacity-yellow-white;
+    transition-duration: 0.5s;
+  }
+
+  &:focus,
+  &:focus::before {
+    background-color: $basic-yellow-white;
+  }
+}
+
+.header__logo {
+  fill: $basic-tomato;
+}

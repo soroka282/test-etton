@@ -1,0 +1,26 @@
+extends ./layout/layout.pug
+
+block content
+
+  main.body__main.main
+    div.main__wrap
+      button.main__button Add item 
+      form.main__form.form(action='#' enctype='multipart/form-data' method='post')
+        h2.form__title Create new item 
+        label.form__label(for='name') Name: 
+        input.form__input(type='text' id='name' value='' name='name')
+        label.form__label Image: 
+        div.form__upload-file
+          input.form__label-file-upload(readonly tabindex='-1' value='File upload')
+          label.form__label.form__label-file(for='upload' tabindex=0) Choose...
+          input.form__input.form__input--file(type='file' id='upload' name='upload' accept=".png, .jpg, .jpeg")
+        label.form__label(for='description') Description 
+        textarea.form__textarea(placeholder='...' id='description' name='description')
+        
+        div.form__wrap-checkbox
+          input.form__checkbox(type='checkbox' id='checkbox' name='checkbox')
+          label.form__label.form__label--checkbox(for='checkbox' tabindex=0) Show
+        
+        div.form__button-wrap 
+          button(type='submit').form__button-submit.form__button OK 
+          button(type='reset').form__button-cancel.form__button Cancel 

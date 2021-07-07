@@ -1,0 +1,23 @@
+html {
+  display: grid;
+  justify-content: center;
+}
+
+a {
+  color: $basic-yellow-white;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
