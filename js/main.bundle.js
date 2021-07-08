@@ -102,7 +102,7 @@ const cardsDescription = document.querySelectorAll('.cards__description');
 
 const SLICE = 'SLICE';
 const DEFAULT = 'DEFAULT';
-const LENGTH_DESCRIPTION = 46;
+const LENGTH_DESCRIPTION = 45;
 
 const getLengthDescription = (value) => {
   for(let i = 0; i < cardsDescription.length; i++) {
