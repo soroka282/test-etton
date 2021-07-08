@@ -1,46 +1,49 @@
 .footer {
-  min-width: 320px;
   height: 100px;
-  font-size: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   border-top: 3px solid $opacity-yellow-white;
 
-  @media (min-width: $width-tablet) {
-    min-width: 768px;
-    text-align: right;
-  }
-
   @media (min-width: $width-desktop) {
-    width: 1200px;
-  }
-
-  & div {
-    display: inline-block;
-    margin: 20px 20px;
-    border-bottom: 3px solid $basic-yellow-white;
-
-    @media (min-width: $width-tablet) {
-      margin: 10px 40px;
-    }
+    min-width: 1200px;
   }
 }
 
 .footer__email {
-  color: $basic-tomato;
-  border-bottom: 3px solid $basic-tomato;
-  transition-duration: 0.5s;
+  text-align: right;
+  min-width: 320px;
+  width: 100%;
+  font-size: 20px;
+  margin: 30px 0;
 
-  &:hover {
-    color: $basic-yellow-white;
+  @media (min-width: $width-tablet) {
+    margin: 30px 0;
+    width: 1200px;
   }
 
-  &:focus {
-    outline: none;
-    color: $basic-yellow-white;
+  & span {
     border-bottom: 3px solid $basic-yellow-white;
   }
 
-  &:active {
-    border-bottom: 3px solid $basic-yellow-white;
+  & a {
+    color: $basic-tomato;
+    border-bottom: 3px solid $basic-tomato;
+    transition-duration: 0.5s;
+    padding-left: 10px;
+    margin-right: 20px;
+
+    &:hover {
+      color: $basic-yellow-white;
+    }
+
+    &:focus {
+      outline: none;
+      color: $basic-yellow-white;
+      border-bottom: 3px solid $basic-yellow-white;
+    }
+
+    &:active {
+      border-bottom: 3px solid $basic-yellow-white;
+    }
   }
 }

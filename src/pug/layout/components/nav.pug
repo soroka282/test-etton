@@ -1,0 +1,6 @@
+nav.body__nav.nav
+  button.nav__button-close
+  ul.nav__list
+    for item in [{text:'Main page', url:'index.html'}, {text: 'Content', url:'cards.html'}]
+      li.nav__item
+        a(href=item.url)=item.text

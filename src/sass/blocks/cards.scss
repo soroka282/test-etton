@@ -1,6 +1,7 @@
 .cards {
   min-width: 320px;
   height: 100%;
+  margin: 0 auto;
 
   @media (min-width: $width-tablet) {
     min-width: 768px;
