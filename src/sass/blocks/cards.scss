@@ -22,6 +22,7 @@
   background-color: $basic-black-blue;
   border-top: 3px solid $basic-tomato;
   transition-duration: 0.25s;
+  padding-bottom: 5px;
 
   &:hover {
     box-shadow: 0 0 20px 1px $basic-tomato;
